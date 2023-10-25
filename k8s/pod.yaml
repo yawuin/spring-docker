@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: spring-docker
+spec:
+  containers:
+  - image: wuinya/spring-docker:1.0.0
+    name: spring-docker
+    ports:
+      - containerPort: 9100
+        protocol: TCP
