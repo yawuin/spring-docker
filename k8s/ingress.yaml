@@ -1,0 +1,15 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: spring-docker
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /spring
+            pathType: Prefix
+            backend:
+              service:
+                name: spring-docker
+                port:
+                  number: 80
