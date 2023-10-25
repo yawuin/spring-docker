@@ -10,6 +10,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: spring-docker
+                name: spring-docker-nodeport
                 port:
                   number: 80
