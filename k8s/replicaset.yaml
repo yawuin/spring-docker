@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: spring-docker
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: spring-docker
+  template:
+    metadata:
+      labels:
+        app: spring-docker
+    spec:
+      containers:
+      - name: spring-docker
+        image: wuinya/spring-docker:1.0.0
